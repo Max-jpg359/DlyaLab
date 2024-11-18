@@ -1,0 +1,51 @@
+body {
+    font-family: Impact, sans-serif;
+    background-color: #060401;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: rgb(255, 0, 0);
+    padding: 15px;
+    text-align: right;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 10px;
+    color: white;
+}
+
+thead th {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    text-align: left;
+    letter-spacing: 1px;
+    padding: 12px;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
