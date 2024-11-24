@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 слова на "-со"?</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="LabKC4.html">Основная страница</a>
+        <a href="page2.html">Позиционирование элементов</a>
+        <a href="table.html">Таблица</a>
+    </div>
+
+    <table>
+        <caption>Таблица всякого</caption>
+        <thead>
+            <tr>
+                <th>Счёт древних шизов</th>
+                <th>Буквы А в порядке возрастания</th>
+                <th>Треки Овсянкина</th>
+                <th>Слово из 5 букв</th>
+                <th>Картофельная бабка в духовке</th>
+                <th>Есть что сказать?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ноль</td>
+                <td>А</td>
+                <td>Опускаю</td>
+                <td>С</td>
+                <td>Картофель–500 г.</td>
+                <td>Да,</td>
+            </tr>
+            <tr>
+                <td>Целковый</td>
+                <td>АА</td>
+                <td>В память о дяде Юре</td>
+                <td>Л</td>
+                <td>Лук репчатый крупный-2 шт.</td>
+                <td>Вроде,</td>
+            </tr>
+            <tr>
+                <td>Полушка</td>
+                <td>ААА</td>
+                <td>Карфентанил</td>
+                <td>О</td>
+                <td>Бекон– 150 г.</td>
+                <td>Нет,</td>
+            </tr>
+            <tr>
+                <td>Медячок</td>
+                <td>АААА</td>
+                <td>Инцидент</td>
+                <td>В</td>
+                <td>Масло сливочное растопленное–2 ст. л.</td>
+                <td>Сказать</td>
+            </tr>
+            <tr>
+                <td>Серебрячок</td>
+                <td>ААААА</td>
+                <td>Ижевск</td>
+                <td>О</td>
+                <td>Лист лавровый–1 шт.</td>
+                <td>Нечего</td>
+            </tr>
+        </tbody>
+    </table>
+    <form id="add-row-form" style="margin-top: 20px;">
+        <h2>Добавить новый прикол</h2>
+        <label for="Number of Elder Shizs">Номер древних Шизов:</label>
+        <input type="Number of Elder Shizs" id="Number of Elder Shizs" name="Number of Elder Shizs" required><br>
+        <label for="Something1">Что-то1:</label>
+        <input type="text" id="Something1" name="Something1" required><br>
+        <label for="Something2">Что-то2:</label>
+        <input type="text" id="Something2" name="Something2" required><br>
+        <label for="Something3">Что-то3:</label>
+        <input type="text" id="Something3" name="Something3" required><br>
+        <label for="Something4">Что-то3:</label>
+        <input type="text" id="Something4" name="Something4" required><br>
+        <label for="Something5">Что-то4:</label>
+        <input type="text" id="Something5" name="Something5" required><br>
+        <button type="button" onclick="addRow()">Добавить</button>
+    </form>
+
+    <script>
+        function addRow() {
+            const number = document.getElementById('Number of Elder Shizs').value;
+            const name = document.getElementById('Something1').value;
+            const quality = document.getElementById('Something2').value;
+            const price = document.getElementById('Something3').value;
+            const distance = document.getElementById('Something4').value;
+            const rating = document.getElementById('Something5').value;
+            const table = document.querySelector('table tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `<td>${number}</td><td>${name}</td><td>${quality}</td><td>${price}</td><td>${distance}</td><td>${rating}</td>`;
+            table.appendChild(newRow);
+            document.getElementById('add-row-form').reset();
+        }
+    </script>
+</body>
+
+</html>
